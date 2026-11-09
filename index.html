@@ -9,7 +9,7 @@
 <link rel="icon" href="img/logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400;1,6..72,500&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Rozha+One&family=Yellowtail&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,15 +18,14 @@
 
 <header class="nav" id="top">
   <a class="nav__brand" href="#top" aria-label="Entre Copas, inicio">
-    <img src="img/logo.jpg" width="46" height="46" alt="Logo de Entre Copas">
-    <span>Entre Copas</span>
+    <img src="img/logo.jpg" width="48" height="48" alt="Logo de Entre Copas">
   </a>
   <nav class="nav__links" aria-label="Principal">
     <a href="#cartelera">Cartelera</a>
     <a href="#salon">El salón</a>
     <a href="#despecho">Despechómetro</a>
     <a href="#visita">Visítanos</a>
-    <a href="#reservas" class="nav__cta">Reservar</a>
+    <a href="#reservas" class="nav__cta">Reservaciones</a>
   </nav>
 </header>
 
@@ -34,45 +33,36 @@
 
 <!-- HERO -->
 <section class="hero" aria-labelledby="hero-title">
-  <div class="hero__glow" aria-hidden="true"></div>
-  <div class="wrap hero__grid">
-    <div class="hero__copy">
-      <p class="eyebrow">Salón de despecho · Música en vivo</p>
-      <h1 id="hero-title" class="hero__title"><span>Entre</span> <em>Copas</em></h1>
-      <p class="hero__tag">Canta, brinda y supéralo</p>
-      <p class="hero__lede">Shows en vivo, tragos y comida para compartir, frente a la Plaza San Juan, en Maracay.</p>
-      <div class="hero__actions">
-        <a class="btn" href="#reservas">Reservar mesa</a>
-        <a class="btn btn--ghost" href="#cartelera">Ver cartelera</a>
-      </div>
-      <ul class="hero__facts">
-        <li><b>Lun – Sáb</b><span>desde las 4 PM</span></li>
-        <li><b>Av. 19 de Abril</b><span>frente a la Plaza San Juan</span></li>
-      </ul>
-    </div>
+  <img class="hero__bg" src="img/grupo.jpg" width="1000" height="670" alt="Un grupo de amigas disfrutando en una mesa del salón Entre Copas" fetchpriority="high">
+  <div class="hero__shade" aria-hidden="true"></div>
 
-    <div class="hero__media" aria-hidden="false">
-      <figure class="ph ph--main">
-        <img src="img/show-mesero.jpg" width="900" height="600" alt="El equipo de Entre Copas animando el salón en plena noche de show" fetchpriority="high">
-      </figure>
-      <figure class="ph ph--sign">
-        <img src="img/letrero.jpg" width="394" height="700" alt="Letrero luminoso de Entre Copas dentro del salón">
-      </figure>
-      <img class="hero__badge" src="img/logo.jpg" width="110" height="110" alt="">
-    </div>
+  <div class="hero__inner">
+    <h1 id="hero-title" class="hero__title">
+      <span class="w w1">Entre</span>
+      <span class="gap" aria-hidden="true">salón de despecho</span>
+      <span class="w w2">Copas</span>
+    </h1>
+    <p class="hero__sub">Canta, brinda<br class="br-m"> y supéralo</p>
   </div>
-  <a class="hero__scroll" href="#cartelera" aria-label="Ir a la cartelera">↓</a>
+
+  <aside class="card" aria-label="Horario y ubicación">
+    <p class="card__script">música en vivo</p>
+    <p class="card__big">Maracay</p>
+    <p class="card__line">Final de la Av. 19 de Abril<br>frente a la Plaza San Juan</p>
+    <p class="card__line card__line--sm">Lunes a sábado<br>desde las 4 PM</p>
+    <a class="card__cta" href="#reservas">Reservaciones</a>
+  </aside>
 </section>
 
 <!-- MARQUEE -->
 <div class="marquee" aria-hidden="true">
   <div class="marquee__track">
-    <span>Menos drama, más música</span><i>♥</i>
-    <span>Canta, brinda y supéralo</span><i>♥</i>
-    <span>Todas las noches serán de despecho</span><i>♥</i>
-    <span>Menos drama, más música</span><i>♥</i>
-    <span>Canta, brinda y supéralo</span><i>♥</i>
-    <span>Todas las noches serán de despecho</span><i>♥</i>
+    <span>Menos drama, más música</span><i>✦</i>
+    <span>Canta, brinda y supéralo</span><i>✦</i>
+    <span>Todas las noches serán de despecho</span><i>✦</i>
+    <span>Menos drama, más música</span><i>✦</i>
+    <span>Canta, brinda y supéralo</span><i>✦</i>
+    <span>Todas las noches serán de despecho</span><i>✦</i>
   </div>
 </div>
 
@@ -80,7 +70,7 @@
 <section class="stage reveal" id="cartelera" aria-labelledby="stage-title">
   <div class="wrap">
     <p class="eyebrow">Cartelera</p>
-    <h2 id="stage-title" class="display">Qué se canta<br>esta <em>semana</em></h2>
+    <h2 id="stage-title" class="display">Qué se canta<br>esta <span class="script script--gold">semana</span></h2>
     <div class="flyers">
       <article class="flyer">
         <span class="flyer__tag flyer__tag--hot">Próximo · Sáb 14 nov</span>
@@ -114,13 +104,13 @@
   <div class="wrap salon__grid">
     <div class="salon__text">
       <p class="eyebrow">El salón</p>
-      <h2 id="salon-title" class="display">Aquí el corazón roto<br>no se esconde.<br><span class="script script--lime">se canta.</span></h2>
+      <h2 id="salon-title" class="display">Aquí el corazón roto<br>no se esconde.<br><span class="script script--gold">se canta.</span></h2>
       <p>Luces bajas, escenario encendido y una copa para acompañar lo que toque superar. Hay shows en vivo, noches para cantar, comida y tragos para compartir con los panas.</p>
       <p>Se viene a llorar un rato, a reírse de la ex y a salir mejor de lo que entraste.</p>
       <a class="link" href="#visita">Cómo llegar</a>
     </div>
     <figure class="salon__photo">
-      <img src="img/grupo.jpg" width="1000" height="670" loading="lazy" alt="Grupo de amigas disfrutando en una mesa del salón">
+      <img src="img/show-mesero.jpg" width="900" height="600" loading="lazy" alt="El equipo de Entre Copas animando el salón en plena noche de show">
     </figure>
   </div>
 
@@ -129,6 +119,10 @@
     <figure><img src="img/halloween.jpg" width="360" height="640" loading="lazy" alt="Disfraces en la noche de Halloween"><figcaption>Halloween</figcaption></figure>
     <figure><img src="img/inauguracion.jpg" width="1000" height="674" loading="lazy" alt="Corte de cinta en la inauguración de Entre Copas"><figcaption>La inauguración</figcaption></figure>
     <figure><img src="img/entrada.jpg" width="360" height="640" loading="lazy" alt="Entrada del local con el letrero de Entre Copas"><figcaption>La entrada</figcaption></figure>
+  </div>
+
+  <div class="wrap">
+    <blockquote class="quote">Cantar con el alma duele menos si estás bien acompañado.</blockquote>
   </div>
 </section>
 
@@ -145,7 +139,7 @@
       <button class="chip" data-k="listo">Ya lo superé</button>
     </div>
     <div class="meter__out" id="meterOut" aria-live="polite">
-      <p class="meter__vibe script script--lime">elige una opción</p>
+      <p class="meter__vibe script script--gold">elige una opción</p>
       <p class="meter__txt">Tu receta de la noche aparece aquí.</p>
     </div>
   </div>
@@ -184,7 +178,7 @@
   <div class="wrap visit__grid">
     <div>
       <p class="eyebrow">Visítanos</p>
-      <h2 id="visit-title" class="display">Frente a la<br><span class="script script--lime">Plaza San Juan</span></h2>
+      <h2 id="visit-title" class="display">Frente a la<br><span class="script script--gold">Plaza San Juan</span></h2>
     </div>
     <dl class="visit__info">
       <div><dt>Dirección</dt><dd>Final de la Av. 19 de Abril, frente a la Plaza San Juan<br>Maracay, Aragua</dd></div>
@@ -193,7 +187,7 @@
       <div><dt>Escríbenos</dt><dd><a href="https://wa.link/oua7ji" target="_blank" rel="noopener">WhatsApp</a></dd></div>
     </dl>
     <a class="map" href="https://www.google.com/maps/search/?api=1&query=Plaza+San+Juan+Av.+19+de+Abril+Maracay" target="_blank" rel="noopener">
-      <svg viewBox="0 0 400 220" aria-hidden="true"><g fill="none" stroke="#f2e9dc" stroke-opacity=".35" stroke-width="1.4"><path d="M0 150 L400 100"/><path d="M0 60 L400 190"/><path d="M120 0 L170 220"/><path d="M260 0 L230 220"/><path d="M0 110 Q200 120 400 60"/></g><circle cx="200" cy="108" r="46" fill="#7a1328" fill-opacity=".35"/><circle cx="200" cy="108" r="9" fill="#e6f23a"/></svg>
+      <svg viewBox="0 0 400 220" aria-hidden="true"><g fill="none" stroke="#f1e6d6" stroke-opacity=".3" stroke-width="1.4"><path d="M0 150 L400 100"/><path d="M0 60 L400 190"/><path d="M120 0 L170 220"/><path d="M260 0 L230 220"/><path d="M0 110 Q200 120 400 60"/></g><circle cx="200" cy="108" r="46" fill="#7a1328" fill-opacity=".4"/><circle cx="200" cy="108" r="9" fill="#d9a566"/></svg>
       <span>Abrir en Google Maps</span>
     </a>
   </div>
@@ -203,7 +197,7 @@
 
 <footer class="foot">
   <img src="img/logo.jpg" width="84" height="84" alt="Entre Copas" class="foot__logo">
-  <p class="foot__big script script--lime">canta, brinda y supéralo</p>
+  <p class="foot__big script script--gold">canta, brinda y supéralo</p>
   <p>© 2026 Entre Copas · Maracay, Venezuela</p>
   <p class="foot__small">Propuesta de rediseño web por <a href="https://aguilarzrw.github.io/portafolio-web/" target="_blank" rel="noopener">Reyniel Aguilar · aguidev</a>. Fotos y flyers: Instagram @entrecopasmcy.</p>
 </footer>

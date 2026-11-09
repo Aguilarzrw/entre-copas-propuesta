@@ -46,3 +46,9 @@ form.addEventListener('submit', async (ev) => {
     window.open(WA_LINK, '_blank', 'noopener');
   }
 });
+
+// Nav: transparente sobre el hero, sólido al hacer scroll
+const nav = document.querySelector('.nav');
+const onScroll = () => nav.classList.toggle('is-solid', window.scrollY > 40);
+onScroll();
+window.addEventListener('scroll', onScroll, { passive: true });
