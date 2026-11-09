@@ -10,9 +10,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Rozha+One&family=Yellowtail&display=swap" rel="stylesheet">
+<script>try{if(sessionStorage.getItem('ec_seen'))document.documentElement.classList.add('seen');sessionStorage.setItem('ec_seen','1')}catch(e){}</script>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<!-- Telón: se abre al entrar (solo la primera vez por sesión) -->
+<div class="curtain" aria-hidden="true"><i></i><i></i><img class="curtain__logo" src="img/logo.jpg" width="150" height="150" alt=""></div>
 
 <div class="pitch-bar">Propuesta de concepto web · no es el sitio oficial · diseño por <a href="https://aguilarzrw.github.io/portafolio-web/" target="_blank" rel="noopener">Reyniel Aguilar</a></div>
 
@@ -20,6 +24,17 @@
   <a class="nav__brand" href="#top" aria-label="Entre Copas, inicio">
     <img src="img/logo.jpg" width="48" height="48" alt="Logo de Entre Copas">
   </a>
+  <div class="sip" aria-hidden="true" title="¡Salud!">
+    <svg viewBox="0 0 60 120" width="26" height="52">
+      <defs>
+        <clipPath id="bowl"><path d="M8 6H52C52 40 40 58 30 58C20 58 8 40 8 6Z"/></clipPath>
+        <linearGradient id="wineGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c42a4a"/><stop offset="1" stop-color="#7a1328"/></linearGradient>
+      </defs>
+      <g clip-path="url(#bowl)"><rect class="sip__wine" x="0" y="6" width="60" height="52" fill="url(#wineGrad)"/></g>
+      <g fill="none" stroke="#f1e6d6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6H52C52 40 40 58 30 58C20 58 8 40 8 6Z"/><path d="M30 58V108"/><path d="M14 112Q30 102 46 112"/></g>
+    </svg>
+    <span class="sip__salud">¡Salud!</span>
+  </div>
   <nav class="nav__links" aria-label="Principal">
     <a href="#cartelera">Cartelera</a>
     <a href="#salon">El salón</a>
@@ -35,6 +50,9 @@
 <section class="hero" aria-labelledby="hero-title">
   <img class="hero__bg" src="img/grupo.jpg" width="1000" height="670" alt="Un grupo de amigas disfrutando en una mesa del salón Entre Copas" fetchpriority="high">
   <div class="hero__shade" aria-hidden="true"></div>
+  <div class="beam beam--a" aria-hidden="true"></div>
+  <div class="beam beam--b" aria-hidden="true"></div>
+  <div class="hero__spot" id="spot" aria-hidden="true"></div>
 
   <div class="hero__inner">
     <h1 id="hero-title" class="hero__title">
@@ -42,10 +60,14 @@
       <span class="gap" aria-hidden="true">salón de despecho</span>
       <span class="w w2">Copas</span>
     </h1>
-    <p class="hero__sub">Canta, brinda<br class="br-m"> y supéralo</p>
+    <p class="karaoke" id="karaoke" aria-label="Canta, brinda y supéralo">
+      <span class="ball" aria-hidden="true"><i></i></span>
+      <span class="k" aria-hidden="true">Canta,</span> <span class="k" aria-hidden="true">brinda</span> <span class="k" aria-hidden="true">y</span> <span class="k" aria-hidden="true">supéralo</span>
+    </p>
   </div>
 
   <aside class="card" aria-label="Horario y ubicación">
+    <p class="live" id="live"><i></i><span>Lun – Sáb desde las 4 PM</span></p>
     <p class="card__script">música en vivo</p>
     <p class="card__big">Maracay</p>
     <p class="card__line">Final de la Av. 19 de Abril<br>frente a la Plaza San Juan</p>
