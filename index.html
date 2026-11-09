@@ -6,13 +6,10 @@
 <title>Entre Copas · Salón de Despecho · Maracay</title>
 <meta name="description" content="Canta, brinda y supéralo. Salón de despecho con música en vivo y food & drinks frente a la Plaza San Juan, Av. 19 de Abril, Maracay.">
 <meta name="theme-color" content="#7a1328">
-<meta property="og:title" content="Entre Copas · Salón de Despecho">
-<meta property="og:description" content="Canta, brinda y supéralo. Música en vivo, food & drinks. Maracay.">
-<meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%237a1328'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Georgia' font-style='italic' font-size='26' fill='%23f2e9dc'%3EEC%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="img/logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400;1,6..72,500&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400;1,6..72,500&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -21,13 +18,15 @@
 
 <header class="nav" id="top">
   <a class="nav__brand" href="#top" aria-label="Entre Copas, inicio">
-    <svg viewBox="0 0 64 64" width="38" height="38" aria-hidden="true"><circle cx="32" cy="32" r="31" fill="#7a1328" stroke="#f2e9dc" stroke-width="1.5"/><text x="32" y="30" text-anchor="middle" font-family="Newsreader,Georgia,serif" font-style="italic" font-size="15" fill="#f2e9dc">Entre</text><text x="32" y="45" text-anchor="middle" font-family="Newsreader,Georgia,serif" font-style="italic" font-size="15" fill="#f2e9dc">Copas</text></svg>
+    <img src="img/logo.jpg" width="46" height="46" alt="Logo de Entre Copas">
+    <span>Entre Copas</span>
   </a>
   <nav class="nav__links" aria-label="Principal">
-    <a href="#noches">Shows</a>
+    <a href="#cartelera">Cartelera</a>
+    <a href="#salon">El salón</a>
     <a href="#despecho">Despechómetro</a>
-    <a href="#visita">Horario</a>
-    <a href="#reservas" class="is-active">Reservaciones</a>
+    <a href="#visita">Visítanos</a>
+    <a href="#reservas" class="nav__cta">Reservar</a>
   </nav>
 </header>
 
@@ -35,47 +34,34 @@
 
 <!-- HERO -->
 <section class="hero" aria-labelledby="hero-title">
-  <div class="hero__light hero__light--a"></div>
-  <div class="hero__light hero__light--b"></div>
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="wrap hero__grid">
+    <div class="hero__copy">
+      <p class="eyebrow">Salón de despecho · Música en vivo</p>
+      <h1 id="hero-title" class="hero__title"><span>Entre</span> <em>Copas</em></h1>
+      <p class="hero__tag">Canta, brinda y supéralo</p>
+      <p class="hero__lede">Shows en vivo, tragos y comida para compartir, frente a la Plaza San Juan, en Maracay.</p>
+      <div class="hero__actions">
+        <a class="btn" href="#reservas">Reservar mesa</a>
+        <a class="btn btn--ghost" href="#cartelera">Ver cartelera</a>
+      </div>
+      <ul class="hero__facts">
+        <li><b>Lun – Sáb</b><span>desde las 4 PM</span></li>
+        <li><b>Av. 19 de Abril</b><span>frente a la Plaza San Juan</span></li>
+      </ul>
+    </div>
 
-  <svg class="hero__mic" viewBox="0 0 200 420" aria-hidden="true">
-    <defs>
-      <linearGradient id="foil" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0" stop-color="#f6dcc0"/>
-        <stop offset=".5" stop-color="#c98a55"/>
-        <stop offset="1" stop-color="#8a5127"/>
-      </linearGradient>
-    </defs>
-    <g fill="none" stroke="url(#foil)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="100" cy="92" r="62"/>
-      <path d="M44 70 Q100 50 156 70"/>
-      <path d="M40 92 H160"/>
-      <path d="M44 114 Q100 134 156 114"/>
-      <path d="M100 30 Q70 92 100 154 M100 30 Q130 92 100 154"/>
-      <path d="M62 148 H138 L132 168 H68 Z"/>
-      <path d="M72 168 L82 380 Q100 400 118 380 L128 168"/>
-      <path d="M86 210 H114 M85 240 H115 M84 270 H116"/>
-    </g>
-  </svg>
-
-  <div class="hero__inner">
-    <h1 id="hero-title" class="hero__title">
-      <span class="w">Entre</span>
-      <span class="script" aria-hidden="true">salón de despecho</span>
-      <span class="w">Copas</span>
-    </h1>
-    <p class="hero__sub">Canta, brinda<br>y supéralo</p>
+    <div class="hero__media" aria-hidden="false">
+      <figure class="ph ph--main">
+        <img src="img/show-mesero.jpg" width="900" height="600" alt="El equipo de Entre Copas animando el salón en plena noche de show" fetchpriority="high">
+      </figure>
+      <figure class="ph ph--sign">
+        <img src="img/letrero.jpg" width="394" height="700" alt="Letrero luminoso de Entre Copas dentro del salón">
+      </figure>
+      <img class="hero__badge" src="img/logo.jpg" width="110" height="110" alt="">
+    </div>
   </div>
-
-  <aside class="card" aria-label="Horario y ubicación">
-    <p class="card__script">música en vivo</p>
-    <p class="card__big">Maracay</p>
-    <p class="card__line">Frente a la Plaza San Juan<br>Av. 19 de Abril</p>
-    <p class="card__line card__line--sm">Lunes a sábado<br>desde las 4 PM</p>
-    <a class="card__cta" href="#reservas">Reservaciones</a>
-  </aside>
-
-  <div class="hero__scroll" aria-hidden="true">desliza ↓</div>
+  <a class="hero__scroll" href="#cartelera" aria-label="Ir a la cartelera">↓</a>
 </section>
 
 <!-- MARQUEE -->
@@ -90,71 +76,59 @@
   </div>
 </div>
 
-<!-- MANIFIESTO -->
-<section class="manifesto reveal" aria-labelledby="man-title">
-  <div class="wrap manifesto__grid">
-    <div>
-      <p class="eyebrow">El salón</p>
-      <h2 id="man-title" class="display">Aquí el corazón roto<br>no se esconde.<br><span class="script script--lime">se canta.</span></h2>
+<!-- CARTELERA -->
+<section class="stage reveal" id="cartelera" aria-labelledby="stage-title">
+  <div class="wrap">
+    <p class="eyebrow">Cartelera</p>
+    <h2 id="stage-title" class="display">Qué se canta<br>esta <em>semana</em></h2>
+    <div class="flyers">
+      <article class="flyer">
+        <span class="flyer__tag flyer__tag--hot">Próximo · Sáb 14 nov</span>
+        <img src="img/flyer-jhonatan.jpg" width="583" height="720" loading="lazy" alt="Flyer: Jhonatan Araque, tributo a Jerry Rivera, sábado 14 de noviembre">
+        <h3>Jhonatan Araque</h3><p>Tributo a Jerry Rivera. Ven y canta al ritmo de salsa.</p>
+      </article>
+      <article class="flyer">
+        <span class="flyer__tag">Todos los jueves</span>
+        <img src="img/flyer-mexicano.jpg" width="576" height="720" loading="lazy" alt="Flyer: Jueves Mexicano con mariachis y Entre Copas Band">
+        <h3>Jueves Mexicano</h3><p>Mariachis con sabor a México y la Entre Copas Band.</p>
+      </article>
+      <article class="flyer">
+        <span class="flyer__tag">Todos los miércoles</span>
+        <img src="img/flyer-cocteles.jpg" width="576" height="720" loading="lazy" alt="Flyer: Miércoles de cócteles 2x1, daiquirí y margarita">
+        <h3>Miércoles de cócteles 2x1</h3><p>Daiquirí y margarita, solo para ellas.</p>
+      </article>
     </div>
-    <div class="manifesto__text">
-      <p>Entre Copas es un salón de despecho en pleno centro de Maracay: luces bajas, escenario encendido y una copa para acompañar lo que toque superar.</p>
-      <p>Hay shows en vivo, noches para cantar, comida y tragos para compartir con los panas. Se viene a llorar un rato, a reírse de la ex y a salir mejor de lo que entraste.</p>
-      <a class="link" href="#visita">Cómo llegar</a>
+    <div class="past">
+      <p class="past__label">Ya pasaron por el escenario</p>
+      <div class="past__row">
+        <img src="img/flyer-ricardo.jpg" width="583" height="720" loading="lazy" alt="Flyer: Ricardo Velasco, El Príncipe de la Ranchera, sábado 7 de noviembre">
+        <img src="img/flyer-sinfronteras.jpg" width="583" height="720" loading="lazy" alt="Flyer: Sin Fronteras, show interactivo, viernes 6 de noviembre">
+        <p>Ricardo Velasco, <i>El Príncipe de la Ranchera</i>, y <i>Sin Fronteras</i> con show interactivo. Cada semana, artistas nuevos.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- PILARES -->
-<section class="pillars wrap reveal" aria-label="Qué encuentras">
-  <article class="pillar">
-    <span class="pillar__n">01</span>
-    <h3>Show</h3>
-    <p>Música en vivo, tributos y noches de cantar con el salón completo.</p>
-    <a href="#noches">Ver el escenario</a>
-  </article>
-  <article class="pillar">
-    <span class="pillar__n">02</span>
-    <h3>Promos</h3>
-    <p>Tragos y promociones del salón. Se anuncian primero en Instagram.</p>
-    <a href="https://www.instagram.com/entrecopasmcy/" target="_blank" rel="noopener">Ver promos</a>
-  </article>
-  <article class="pillar">
-    <span class="pillar__n">03</span>
-    <h3>Horario</h3>
-    <p>De lunes a sábado, desde las 4 de la tarde. Frente a la Plaza San Juan.</p>
-    <a href="#visita">Ver ubicación</a>
-  </article>
-</section>
+<!-- EL SALON -->
+<section class="salon reveal" id="salon" aria-labelledby="salon-title">
+  <div class="wrap salon__grid">
+    <div class="salon__text">
+      <p class="eyebrow">El salón</p>
+      <h2 id="salon-title" class="display">Aquí el corazón roto<br>no se esconde.<br><span class="script script--lime">se canta.</span></h2>
+      <p>Luces bajas, escenario encendido y una copa para acompañar lo que toque superar. Hay shows en vivo, noches para cantar, comida y tragos para compartir con los panas.</p>
+      <p>Se viene a llorar un rato, a reírse de la ex y a salir mejor de lo que entraste.</p>
+      <a class="link" href="#visita">Cómo llegar</a>
+    </div>
+    <figure class="salon__photo">
+      <img src="img/grupo.jpg" width="1000" height="670" loading="lazy" alt="Grupo de amigas disfrutando en una mesa del salón">
+    </figure>
+  </div>
 
-<!-- NOCHES -->
-<section class="nights reveal" id="noches" aria-labelledby="nights-title">
-  <div class="wrap">
-    <p class="eyebrow">El escenario</p>
-    <h2 id="nights-title" class="display">Noches que ya<br><span class="script script--lime">cantaron</span></h2>
-    <ul class="nights__list">
-      <li>
-        <span class="nights__date">Sáb 7 nov</span>
-        <div><h3>Ricardo Velasco</h3><p>El Príncipe de la Ranchera</p></div>
-        <span class="nights__tag">Canta, brinda y supéralo</span>
-      </li>
-      <li>
-        <span class="nights__date">En vivo</span>
-        <div><h3>Jhonatan Araque</h3><p>Tributo a Jerry Rivera</p></div>
-        <span class="nights__tag">Show</span>
-      </li>
-      <li>
-        <span class="nights__date">Jueves</span>
-        <div><h3>Deja de esperar</h3><p>Noche para cantar</p></div>
-        <span class="nights__tag">Karaoke</span>
-      </li>
-      <li>
-        <span class="nights__date">Halloween</span>
-        <div><h3>Noche de Halloween</h3><p>Música en vivo · Show interactivo</p></div>
-        <span class="nights__tag">Especial</span>
-      </li>
-    </ul>
-    <p class="note">La cartelera real se actualiza desde Instagram o un panel simple de administración.</p>
+  <div class="wrap mosaic" aria-label="Así se vive">
+    <figure><img src="img/vip.jpg" width="576" height="720" loading="lazy" alt="Noche VIP con letrero luminoso en el salón"><figcaption>Noche VIP</figcaption></figure>
+    <figure><img src="img/halloween.jpg" width="360" height="640" loading="lazy" alt="Disfraces en la noche de Halloween"><figcaption>Halloween</figcaption></figure>
+    <figure><img src="img/inauguracion.jpg" width="1000" height="674" loading="lazy" alt="Corte de cinta en la inauguración de Entre Copas"><figcaption>La inauguración</figcaption></figure>
+    <figure><img src="img/entrada.jpg" width="360" height="640" loading="lazy" alt="Entrada del local con el letrero de Entre Copas"><figcaption>La entrada</figcaption></figure>
   </div>
 </section>
 
@@ -213,7 +187,7 @@
       <h2 id="visit-title" class="display">Frente a la<br><span class="script script--lime">Plaza San Juan</span></h2>
     </div>
     <dl class="visit__info">
-      <div><dt>Dirección</dt><dd>Av. 19 de Abril, frente a la Plaza San Juan<br>Maracay, Aragua</dd></div>
+      <div><dt>Dirección</dt><dd>Final de la Av. 19 de Abril, frente a la Plaza San Juan<br>Maracay, Aragua</dd></div>
       <div><dt>Horario</dt><dd>Lunes a sábado · desde las 4 PM</dd></div>
       <div><dt>Síguenos</dt><dd><a href="https://www.instagram.com/entrecopasmcy/" target="_blank" rel="noopener">@entrecopasmcy</a></dd></div>
       <div><dt>Escríbenos</dt><dd><a href="https://wa.link/oua7ji" target="_blank" rel="noopener">WhatsApp</a></dd></div>
@@ -228,9 +202,10 @@
 </main>
 
 <footer class="foot">
+  <img src="img/logo.jpg" width="84" height="84" alt="Entre Copas" class="foot__logo">
   <p class="foot__big script script--lime">canta, brinda y supéralo</p>
   <p>© 2026 Entre Copas · Maracay, Venezuela</p>
-  <p class="foot__small">Propuesta de rediseño web por <a href="https://aguilarzrw.github.io/portafolio-web/" target="_blank" rel="noopener">Reyniel Aguilar · aguidev</a>. Las fotos del local se integran al sitio final.</p>
+  <p class="foot__small">Propuesta de rediseño web por <a href="https://aguilarzrw.github.io/portafolio-web/" target="_blank" rel="noopener">Reyniel Aguilar · aguidev</a>. Fotos y flyers: Instagram @entrecopasmcy.</p>
 </footer>
 
 <script src="app.js"></script>
